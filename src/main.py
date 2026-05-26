@@ -11,11 +11,16 @@ def main():
     df = normalize_address(df)
     df = clean_address(df)
 
-
     keep_cols = ["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]
     df_new = df[keep_cols]
 
-    print(df_new.head(13))
+    df_colnew = df_new.copy()
+
+    df_colnew["price_per_sqft"] = df_colnew["price"] / df_colnew["sqft"] # useful for knowing the price per square foot of the house
+
+    print(df_colnew[["price_per_sqft","price","sqft"]].head())
+    print(df_colnew.info())
+    print(df_new[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]].head())
     print(df_new.info())
     
     
