@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was a way for me to get introduced into data cleaning and preprocessing pipeline. Additionally, I thought that there might be families desiring to move to Calgary urgently due to unforseen circumstances or just wanting to move to Calgary in an easier way instead of frantically searching and deciding what house is best for them. This prompted me to attempt to build a housing search and ranking system to give an idea of listing based on completeness, location, and affordability. 
+This project was a way for me to get introduced into data cleaning and preprocessing pipeline. Additionally, I thought that there might be families desiring to move to Calgary urgently due to unforseen circumstances or just wanting to move to Calgary in an easier way instead of frantically searching and deciding what house is best for them. This prompted me to attempt to build a housing search and ranking system to give an idea of how good house listings are based on completeness, location, and affordability. 
 
 ## Version 1
 
