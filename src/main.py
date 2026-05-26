@@ -1,5 +1,5 @@
 import pandas as pd
-from clean import clean_price,clean_address
+from clean import clean_price,clean_address, normalize_address, clean_lotsize
 
 
 def main():
@@ -7,6 +7,8 @@ def main():
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
     df = clean_price(df)
+    df = clean_lotsize(df)
+    df = normalize_address(df)
     df = clean_address(df)
 
 
