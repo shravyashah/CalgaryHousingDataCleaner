@@ -1,0 +1,61 @@
+source,listing_id,address,community,property_type,bedrooms,bathrooms,price,sqft,lot_size,year_built,garage,basement,listing_date,days_on_market,agent_name,agent_phone,status
+Realtor.ca,RL-10021,145 Saddleridge Dr NE,Saddleridge,Detached,4,3,"$649,900",2210,4500,2005,Double Attached,Finished,2024-03-01,55,Sarah Thompson,403-555-0192,For Sale
+Realtor.ca,RL-10022,37 Evanspark Circ NW,Evanston,Detached,3,2.5,"$589,000",1980,3800,2011,Double Attached,Unfinished,2024-02-15,69,Mike Patel,403-555-0141,For Sale
+Realtor.ca,RL-10023,902 Panorama Hills Dr NW,Panorama Hills,Semi-Detached,3,2,"$479,500",1650,2800,2003,Single Attached,Unfinished,2024-03-10,47,Rachel Kim,403-555-0178,For Sale
+Realtor.ca,RL-10024,2204 17 St SW,Bankview,Detached,2,1,"$725,000",1200,4100,1952,None,None,2024-01-22,88,Carlos Ramirez,403-555-0193,For Sale
+Realtor.ca,RL-10025,55 Mahogany Lake SE,Mahogany,Detached,4,3.5,"$899,000",2800,5200,2018,Triple Attached,Finished,2024-03-05,52,Sarah Thompson,403-555-0192,For Sale
+Realtor.ca,RL-10026,310 Legacy Village Rd SE,Legacy,Row/Townhouse,3,2.5,"$449,900",1720,N/A,2020,Single Attached,Unfinished,2024-02-28,58,James Nguyen,403-555-0165,For Sale
+Realtor.ca,RL-10027,17 Tuscany Ridge Hts NW,Tuscany,Detached,5,3,"$799,000",2950,5600,2001,Double Attached,Finished,2024-01-30,86,Angela Brooks,403-555-0134,For Sale
+Realtor.ca,RL-10028,44 Copperfield Blvd SE,Copperfield,Detached,3,2,"$539,000",1840,3900,2008,Double Attached,Unfinished,2024-03-15,42,Mike Patel,403-555-0141,For Sale
+Realtor.ca,RL-10029,820 Cranston Ave SE,Cranston,Semi-Detached,4,3,"$599,900",2100,3400,2015,Double Attached,Finished,2024-02-10,75,Rachel Kim,403-555-0178,For Sale
+Realtor.ca,RL-10030,63 Auburn Shores Landng SE,Auburn Bay,Detached,4,3.5,"$1,050,000",3100,5800,2016,Triple Attached,Finished,2024-01-15,100,Carlos Ramirez,403-555-0193,For Sale
+Realtor.ca,RL-10031,15 Sage Meadows Circ NW,Sage Hill,Row/Townhouse,2,2,"$389,000",1350,N/A,2019,Single Attached,None,2024-03-20,37,James Nguyen,403-555-0165,For Sale
+Realtor.ca,RL-10032,4512 Bowness Rd NW,Bowness,Detached,3,1,"$679,000",1100,5000,1958,Single Detached,None,2024-02-01,83,Angela Brooks,403-555-0134,For Sale
+Realtor.ca,RL-10033,,Renfrew,Detached,3,2,"$759,000",1450,4200,1962,Single Detached,Finished,2024-03-08,49,,403-555-0155,For Sale
+Realtor.ca,RL-10034,78 Chaparral Valley Dr SE,Chaparral,Detached,4,3,"$669,000",2350,4800,2013,Double Attached,Finished,2024-02-22,63,Sarah Thompson,403-555-0192,For Sale
+Realtor.ca,RL-10035,305 23 Ave SW,Mission,Condo/Apartment,1,1,"$295,000",680,N/A,1995,Underground,None,2024-03-12,45,Mike Patel,403-555-0141,For Sale
+Zillow,ZW-4401,#203 - 1020 9 Ave SE,Inglewood,Condo/Apartment,2,2,480000,950,,2010,Underground,,2024/02/05,80,T. Williams,4035550188,Active
+Zillow,ZW-4402,82 Everstone Rise SW,Evergreen,Detached,4,3,698000,2400,4700,2006,Double Attached,Finished,2024/03/18,39,D. Okafor,4035550177,Active
+Zillow,ZW-4403,19 Chaparral Valley Grv SE,Chaparral,Detached,3,2.5,614500,2050,4100,2014,Double Attached,Unfinished,2024/01/28,92,T. Williams,4035550188,Active
+Zillow,ZW-4404,710 2 St NW,Sunnyside,Semi-Detached,3,2,589000,1380,2900,1948,None,Finished,2024/03/03,54,L. MacDonald,4035550166,Active
+Zillow,ZW-4405,1200 Prominence Way SW,Patterson,Detached,5,4,1175000,3400,6200,2004,Triple Attached,Finished,2024/02/14,71,D. Okafor,4035550177,Active
+Zillow,ZW-4406,32 Copperfield Blvd SE,Copperfield,Detached,3,2,530000,1790,3850,2008,Double Attached,Unfinished,2024/03/15,42,L. MacDonald,4035550166,Active
+Zillow,ZW-4407,88 Royal Oak Grv NW,Royal Oak,Row/Townhouse,3,2.5,429000,1600,,2012,Single Attached,Unfinished,2024/02/20,66,T. Williams,4035550188,Active
+Zillow,ZW-4408,5003 Varna Dr NW,Varsity,Detached,4,2.5,875000,2050,6100,1978,Double Attached,Finished,2024/01/10,110,D. Okafor,4035550177,Active
+Zillow,ZW-4409,45 Saddleridge Drive Northeast,Saddleridge,Detached,4,3,645000,2190,4480,2005,Double Attached,Finished,2024/03/01,55,T. Williams,4035550188,Active
+Zillow,ZW-4410,22 Evanston Sq NW,Evanston,Semi-Detached,3,2,469000,1590,2700,2013,Single Attached,Unfinished,2024/03/25,32,L. MacDonald,4035550166,Active
+Zillow,ZW-4411,103 Aspen Hills Blvd SW,Aspen Woods,Detached,4,3.5,985000,2900,5500,2009,Triple Attached,Finished,2024/02/08,77,D. Okafor,4035550177,Active
+Zillow,ZW-4412,1818 12 Ave SW,Sunalta,Condo/Apartment,1,1,275000,620,,2001,Underground,,2024/03/22,35,T. Williams,4035550188,Active
+Zillow,ZW-4413,,Renfrew,Detached,3,2,760000,1460,4210,1962,,Finished,2024/03/08,49,,4035550155,Active
+Zillow,ZW-4414,672 Tuscany Ridge Hts NW,Tuscany,Detached,5,3,795000,2930,5580,2001,Double Attached,Finished,2024/01/30,86,L. MacDonald,4035550166,Active
+Zillow,ZW-4415,900 Cranston Ave SE,Cranston,Detached,3,2.5,625000,2180,4050,2016,Double Attached,Unfinished,2024/02/18,68,D. Okafor,4035550177,Active
+PropertyGuys,PG-8801,145 Saddleridge DR NE,SADDLERIDGE,Detached,4,3,649900,2210,4500 sqft,2005,Double Attached,Yes,March 1 2024,55,S. Thompson,(403) 555-0192,AVAILABLE
+PropertyGuys,PG-8802,215 Sherwood Blvd NW,Sherwood,Detached,3,2,569000,1920,3700,2016,Double Attached,No,March 14 2024,43,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8803,44 Copperfield Boulevard SE,COPPERFIELD,Detached,3,2,539000,1840,3900 sqft,2008,Double Attached,No,March 15 2024,42,M. Patel,(403) 555-0141,AVAILABLE
+PropertyGuys,PG-8804,18 Walden Parade SE,Walden,Semi-Detached,3,2.5,499000,1760,2900,2019,Single Attached,No,February 12 2024,73,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8805,92 Signal Hill Circ SW,Signal Hill,Detached,4,3,749000,2600,5300,1996,Double Attached,Yes,January 20 2024,90,R. Kim,(403) 555-0178,AVAILABLE
+PropertyGuys,PG-8806,3812 Centre A St NE,Highland Park,Detached,3,1.5,598000,1250,4300,1955,Single Detached,Yes,March 5 2024,52,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8807,88 Savanna Blvd NE,Savanna,Row/Townhouse,3,2.5,415000,1580,,2021,Single Attached,No,March 28 2024,29,R. Kim,(403) 555-0178,AVAILABLE
+PropertyGuys,PG-8808,507 30 Ave SW,Elbow Park,Detached,5,4,1350000,3100,7200,1935,Double Detached,Yes,February 1 2024,84,S. Thompson,(403) 555-0192,AVAILABLE
+PropertyGuys,PG-8809,28 Nolan Hill Blvd NW,Nolan Hill,Detached,4,3,699000,2500,4900,2017,Double Attached,No,February 25 2024,60,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8810,16 Quarry Villas SE,Quarry Park,Detached,4,3.5,825000,2750,5100,2014,Triple Attached,Yes,January 8 2024,117,R. Kim,(403) 555-0178,AVAILABLE
+PropertyGuys,PG-8811,75 Auburn Bay Blvd SE,Auburn Bay,Detached,3,2,629000,2050,4400,2012,Double Attached,No,March 10 2024,47,S. Thompson,(403) 555-0192,AVAILABLE
+PropertyGuys,PG-8812,21 Bridlewood Blvd SW,Bridlewood,Detached,4,3,615000,2280,4650,2003,Double Attached,Yes,February 18 2024,67,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8813,404 14 St NW,Hillhurst,Semi-Detached,3,2,665000,1420,3000,1940,Single Detached,Yes,March 22 2024,35,R. Kim,(403) 555-0178,AVAILABLE
+PropertyGuys,PG-8814,37 Evanston Sq NW,Evanston,Semi-Detached,3,2,465000,1570,2680,2013,Single Attached,No,March 25 2024,32,B. Johansson,(403) 555-0201,AVAILABLE
+PropertyGuys,PG-8815,1401 17 Ave SW,Lower Mount Royal,Condo/Apartment,2,2,420000,890,,2008,Underground,No,March 17 2024,40,S. Thompson,(403) 555-0192,AVAILABLE
+MLS_Feed,MLS-55601,145 Saddleridge Dr NE,Saddleridge,Detached,4,3,649900.0,2210,,2005,Y,,2024-03-01,,Sarah Thompson,,ACTIVE
+MLS_Feed,MLS-55602,4 Skyview Ranch Rd NE,Skyview Ranch,Semi-Detached,3,2.5,519000.0,1810,3200,2017,Y,N,2024-03-02,54,Yusuf Ali,,ACTIVE
+MLS_Feed,MLS-55603,25 Cornerstone Blvd NE,Cornerstone,Row/Townhouse,3,2,399000.0,1450,,2022,Y,N,2024-03-20,37,Priya Sharma,,ACTIVE
+MLS_Feed,MLS-55604,820 Cranston Ave SE,Cranston,Semi-Detached,4,3,599900.0,2100,3400,2015,Y,Y,2024-02-10,75,Rachel Kim,,ACTIVE
+MLS_Feed,MLS-55605,14 Hawkwood Blvd NW,Hawkwood,Detached,4,3,715000.0,2430,5200,1989,Y,Y,2024-01-25,95,Angela Brooks,,ACTIVE
+MLS_Feed,MLS-55606,63 Auburn Shores Lndg SE,Auburn Bay,Detached,4,3.5,1050000.0,3100,5800,2016,Y,Y,2024-01-15,,Carlos Ramirez,,ACTIVE
+MLS_Feed,MLS-55607,230 Dieppe Dr SW,Glamorgan,Detached,3,1.5,635000.0,1180,4700,1958,Y,Y,2024-02-28,57,Yusuf Ali,,ACTIVE
+MLS_Feed,MLS-55608,19 Cityscape Blvd NE,Cityscape,Detached,3,2.5,574000.0,1960,3500,2019,Y,N,2024-03-14,43,Priya Sharma,,ACTIVE
+MLS_Feed,MLS-55609,88 Mahogany Lake SE,Mahogany,Detached,5,4,1120000.0,3350,5900,2019,Y,Y,2024-02-05,80,Rachel Kim,,ACTIVE
+MLS_Feed,MLS-55610,502 30 Ave NW,Mount Pleasant,Detached,3,1.5,700000.0,1050,4400,1948,N,Y,2024-03-07,50,Angela Brooks,,ACTIVE
+MLS_Feed,MLS-55611,33 Redstone Circ NE,Redstone,Row/Townhouse,3,2.5,409000.0,1520,,2021,Y,N,2024-03-19,38,Yusuf Ali,,ACTIVE
+MLS_Feed,MLS-55612,1101 Cameron Ave SW,Upper Mount Royal,Detached,6,5,2750000.0,5200,9100,1928,Y,Y,2024-01-05,120,Priya Sharma,,ACTIVE
+MLS_Feed,MLS-55613,73 Sherwood Blvd NW,Sherwood,Detached,4,3,724000.0,2480,4800,2017,Y,N,2024-02-22,63,Rachel Kim,,ACTIVE
+MLS_Feed,MLS-55614,9 Walden Grove SE,Walden,Detached,3,2.5,578000.0,2010,3800,2020,Y,N,2024-03-11,46,Angela Brooks,,ACTIVE
+MLS_Feed,MLS-55615,211 18 Ave SW,Lower Mount Royal,Condo/Apartment,2,2,395000.0,875,,2005,Y,,2024-02-15,70,Yusuf Ali,,ACTIVE
