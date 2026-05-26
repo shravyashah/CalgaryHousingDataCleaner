@@ -6,14 +6,15 @@ def main():
 
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
+    df = clean_price(df)
+    df = clean_address(df)
+
+
     keep_cols = ["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]
     df_new = df[keep_cols]
-    
-    df_new = clean_price(df_new)
-    df_new = clean_address(df_new)
-    print(df_new.head())
-    print(df_new["price"])
-    print(df_new["address"])
+
+    print(df_new.head(13))
+    print(df_new.info())
     
     
 if __name__ == "__main__":
