@@ -1,5 +1,6 @@
 import pandas as pd
 from clean import clean_price,clean_address, normalize_address, clean_lotsize
+from features import create_price_per_sqft
 
 
 def main():
@@ -12,17 +13,14 @@ def main():
     df = clean_address(df)
 
     keep_cols = ["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]
-    df_new = df[keep_cols]
+    df = df[keep_cols]
 
-    df_colnew = df_new.copy()
+    df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
 
-    df_colnew["price_per_sqft"] = df_colnew["price"] / df_colnew["sqft"] # useful for knowing the price per square foot of the house
-
-    print(df_colnew[["price_per_sqft","price","sqft"]].head())
-    print(df_colnew.info())
-    print(df_new[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]].head())
-    print(df_new.info())
+    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft"]].head(54))
+    print(df.info())
     
     
+
 if __name__ == "__main__":
     main()
