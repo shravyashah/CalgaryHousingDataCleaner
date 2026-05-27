@@ -1,6 +1,6 @@
 import pandas as pd
 from clean import clean_price,clean_address, normalize_address, clean_lotsize
-from features import create_price_per_sqft
+from features import create_price_per_sqft, create_price_per_lot_size, ranking_price_per_sqft_system
 
 
 def main():
@@ -16,8 +16,9 @@ def main():
     df = df[keep_cols]
 
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
+    df = create_price_per_lot_size(df) # useful for knowing the price per lot size of the house
 
-    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft"]].head(54))
+    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft", "price_per_lot_size"]].head(54))
     print(df.info())
     
     
