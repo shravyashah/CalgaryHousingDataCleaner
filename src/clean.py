@@ -16,12 +16,16 @@ def clean_price(df): # cleaning the price column
     df["price"] = df["price"].str.replace("$", "",regex=False)
     df["price"] = df["price"].str.replace(",", "",regex=False)
     df["price"] = pd.to_numeric(df["price"], errors='coerce')
-    df["price"] = df["price"].astype(int)
+    df["price"] = df["price"].fillna(0).astype(int)
     return df
 
-def clean_lotsize(df): # cleaning the lot_size column
-    df["lot_size"] = df["lot_size"].astype(str)
-    df["lot_size"] = df["lot_size"].str.replace(",", "",regex=False)
-    df["lot_size"] = df["lot_size"].str.replace("sqft", "",regex=False)
-    df["lot_size"] = pd.to_numeric(df["lot_size"], errors='coerce')
+def normalize_garage(df): # normalizing the garage column
+    df["garage"] = df["garage"].astype(str).str.lower() # convert to lowercase
+    no_value = ["none", "no garage", "n/a", "na", "nan", "null", ""]
+    df["garage"] = df["garage"].apply(lambda x: "No" if x in no_value else "Yes") # replace no value with "no garage"
+    return df
+
+
+def clean_garage(df):
+    df["garage"] = df["garage"].astype(str)
     return df
