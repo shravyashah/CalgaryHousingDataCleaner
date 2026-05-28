@@ -29,3 +29,8 @@ def normalize_garage(df): # normalizing the garage column
 def clean_garage(df):
     df["garage"] = df["garage"].astype(str)
     return df
+
+def clean_days_on_market(df):
+    df["days_on_market"] = pd.to_numeric(df["days_on_market"], errors='coerce')
+    df["days_on_market"] = df["days_on_market"].fillna(0).astype(int)
+    return df

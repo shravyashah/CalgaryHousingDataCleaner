@@ -1,6 +1,7 @@
 import pandas as pd
-from clean import clean_price,clean_address, normalize_address, normalize_garage, clean_garage
+from clean import clean_price,clean_address, normalize_address, normalize_garage, clean_garage, clean_days_on_market
 from features import create_price_per_sqft
+from rank import score_houses
 
 
 def main():
@@ -12,13 +13,16 @@ def main():
     df = clean_garage(df)
     df = normalize_address(df)
     df = clean_address(df)
+    df = clean_days_on_market(df)
 
     keep_cols = ["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
-    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft"]].head(54))
+    df = score_houses(df)
+    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft","score"]].head(54))
     print(df.info())
+    
     
     
 
