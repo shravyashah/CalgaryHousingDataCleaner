@@ -15,12 +15,12 @@ def main():
     df = clean_address(df)
     df = clean_days_on_market(df)
 
-    keep_cols = ["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market"]
+    keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
-    print(df[["address","bedrooms","bathrooms","price","sqft","lot_size", "garage","community","property_type","days_on_market", "price_per_sqft","score"]].head(54))
+    print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score"]].head(54))
     print(df.info())
     
     
