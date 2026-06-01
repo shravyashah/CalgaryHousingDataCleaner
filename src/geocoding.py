@@ -6,7 +6,7 @@ import time
 geolocator = Nominatim(user_agent="calgary_houses_geocoder")
 def geocode_address(address):
     try:
-        location = geolocator.geocode(address) # geocode the address to get the latitude and longitude
+        location = geolocator.geocode(address, country_codes="CA") # geocode the address to get the latitude and longitude
         if location: # if sucessfully geocoded, return the latitude and longitude
             return location.latitude, location.longitude
         else:

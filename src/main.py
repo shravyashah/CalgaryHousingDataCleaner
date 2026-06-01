@@ -10,10 +10,11 @@ def main():
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
     df = clean_price(df)
-    df = normalize_garage(df)
     df = clean_garage(df)
+    df = normalize_garage(df)
     df = normalize_address(df)
     df = clean_address(df)
+    
     df = clean_days_on_market(df)
 
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]

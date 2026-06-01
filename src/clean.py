@@ -1,7 +1,8 @@
 import pandas as pd
 
 def normalize_address(df): # normalizing the address column
-    abbreviations = { "NorthEast": "NE", "NorthWest": "NW", "SouthEast": "SE", "SouthWest": "SW", "Street": "St", "Avenue": "Ave", "Boulevard": "Blvd", "Drive": "Dr", "Road": "Rd", "Lane": "Ln", "Court": "Ct" }
+    abbreviations = { "Northeast": "NE", "Northwest": "NW", "Southeast": "SE", "Southwest": "SW", "Street": "St", "Avenue": "Ave", "Boulevard": "Blvd", "Drive": "Dr", "Road": "Rd", "Lane": "Ln", "Court": "Ct" ,
+                     "Circle": "Cir","Circ": "Cir", "Place": "Pl", "Terrace": "Ter","Trail": "Trl", "Parkway": "Pkwy", "Highway": "Hwy", "Close": "Cl", "Crescent": "Cres","Landing": "Lndg", "Way": "Way", "Square": "Sq", "Loop": "Loop", "Point": "Pt", "View": "Vw"}
     for key, value in abbreviations.items():
         df["address"] = df["address"].str.replace(rf"\b{key}\b", value, regex=True) # replace full words with abbreviations using regex
     return df
@@ -9,6 +10,8 @@ def normalize_address(df): # normalizing the address column
 def clean_address(df): # cleaning the address column
     df = df.dropna(subset=["address"]) # drop rows with missing address values
     df = df.drop_duplicates(subset=["address"])
+
+    df["address"] = df["address"] + ", Calgary, AB" # add city and province to the address for better geocoding results
     return df
 
 def clean_price(df): # cleaning the price column
