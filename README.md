@@ -12,8 +12,15 @@ Version 1 is now completed and includes:
 - Standarized address format to detect duplicates in address
 - Computed price/sqft which will be used in ranking system
 
+## Version 2
+Version 2 is completed and includes
+- Ranking system out of 100 that ranks based on price/sqft, # of bedrooms, # of bathrooms,
+  number of days on the market, and if it has a garage
+- Cleaned up garage and number of days on market columns
+
 ## What is to come
-The project will move onto version 2 which will hopefully implement a ranking system based on completeness and affordability. Version 3 will implement the location aspect of the project and then the ranking system will be updated accordingly.
+The project is currently in version 3 which will hopefully implement an improved ranking system. The first think that was done was geocoding to convert the addresses
+into coordinates so that other features can be implemented.
 
 An interesting feature that can be added is adding live-time data, so anyone can access it at anytime without having to search up listings. Just a thought for now... 
 
@@ -22,4 +29,5 @@ Here are the steps to access the project on PowerShell or whatever operating sys
 1. Go into the directory where your project is located
 2. Activate venv by typing in venv\Scripts\activate in the terminal incase you need to install something
 3. Install pandas by running the following command: pip install pandas
-4. Then to run the project go to the directory that the project is in and then run: python src\main.py
+4. Then install geopy by running the following command: pip install pandas geopy
+5. Then to run the project go to the directory that the project is in and then run: python src\main.py
