@@ -8,6 +8,9 @@ def normalize_address(df): # normalizing the address column
     return df
 
 def clean_address(df): # cleaning the address column
+    df["address"] = df["address"].astype(str).str.strip()
+    df["address"] = df["address"].str.replace("#",'', regex=False) # replace "#" with "Unit " for better geocoding results
+    df["address"] = df["address"].str.replace("-", "", regex=False) # ensure there is a space after "Unit" for better geocoding results
     df = df.dropna(subset=["address"]) # drop rows with missing address values
     df = df.drop_duplicates(subset=["address"])
 

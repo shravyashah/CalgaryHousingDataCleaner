@@ -4,6 +4,8 @@ from features import create_price_per_sqft
 from rank import score_houses
 from geocoding import add_geocodes
 
+def check(df, step):
+    print(step, type(df))
 
 def main():
 
@@ -23,11 +25,24 @@ def main():
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
     df = add_geocodes(df)
+
+    #debugging output to check the cleaned and processed data
+
+    #df = clean_address(df)
+    #check(df, "after clean_address")
+
+    #df = clean_price(df)
+    #check(df, "after clean_price")
+
+    #df = normalize_address(df)
+    #check(df, "after normalize_address")
+
+    #df = add_geocodes(df)
+    #check(df, "after geocoding")
+    
+    # debugging ends here, final output below
     print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))
     print(df.info())
     
-    
-    
-
 if __name__ == "__main__":
     main()
