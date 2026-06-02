@@ -1,23 +1,23 @@
 address,bedrooms,bathrooms,price,sqft,garage,community,property_type,days_on_market,latitude,longitude,geo_valid,price_per_sqft,score
 "145 Saddleridge Dr NE, Calgary, AB",4,3.0,649900,2210,Yes,Saddleridge,Detached,55,51.13,-113.95,True,294.07,74.21
 "37 Evanspark Cir NW, Calgary, AB",3,2.5,589000,1980,Yes,Evanston,Detached,69,51.17,-114.11,True,297.47,66.21
-"902 Panorama Hills Dr NW, Calgary, AB",3,2.0,479500,1650,Yes,Panorama Hills,Semi-Detached,47,51.15,-114.08,True,290.61,66.22
-"2204 17 St SW, Calgary, AB",2,1.0,725000,1200,Yes,Bankview,Detached,88,51.03,-114.1,True,604.17,22.84
+"902 Panorama Hills Dr NW, Calgary, AB",3,2.0,479500,1650,Yes,Panorama Hills,Semi-Detached,47,51.16,-114.08,True,290.61,66.22
+"2204 17 St SW, Calgary, AB",2,1.0,725000,1200,Yes,Bankview,Detached,88,51.02,-114.1,True,604.17,22.84
 "310 Legacy Village Rd SE, Calgary, AB",3,2.5,449900,1720,Yes,Legacy,Row/Townhouse,58,50.86,-114.03,True,261.57,70.67
 "17 Tuscany Ridge Hts NW, Calgary, AB",5,3.0,799000,2950,Yes,Tuscany,Detached,86,51.13,-114.25,True,270.85,77.92
-"44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,Copperfield,Detached,42,50.91,-113.94,True,292.93,66.4
+"44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,Copperfield,Detached,42,50.91,-113.93,True,292.93,66.4
 "820 Cranston Ave SE, Calgary, AB",4,3.0,599900,2100,Yes,Cranston,Semi-Detached,75,50.88,-113.98,True,285.67,73.37
-"63 Auburn Shores Landng SE, Calgary, AB",4,3.5,1050000,3100,Yes,Auburn Bay,Detached,100,50.89,-113.96,True,338.71,68.55
+"63 Auburn Shores Landng SE, Calgary, AB",4,3.5,1050000,3100,Yes,Auburn Bay,Detached,100,50.89,-113.95,True,338.71,68.55
 "15 Sage Meadows Cir NW, Calgary, AB",2,2.0,389000,1350,Yes,Sage Hill,Row/Townhouse,37,51.17,-114.13,True,288.15,63.29
 "4512 Bowness Rd NW, Calgary, AB",3,1.0,679000,1100,Yes,Bowness,Detached,83,51.06,-114.15,True,617.27,25.96
-"78 Chaparral Valley Dr SE, Calgary, AB",4,3.0,669000,2350,Yes,Chaparral,Detached,63,50.88,-114.01,True,284.68,74.47
+"78 Chaparral Valley Dr SE, Calgary, AB",4,3.0,669000,2350,Yes,Chaparral,Detached,63,50.88,-114.02,True,284.68,74.47
 "305 23 Ave SW, Calgary, AB",1,1.0,295000,680,Yes,Mission,Condo/Apartment,45,51.03,-114.11,True,433.82,39.24
 " 1020 9 Ave SE, Calgary, AB",2,2.0,480000,950,Yes,Inglewood,Condo/Apartment,80,51.04,-114.04,True,505.26,38.27
 "82 Everstone Rise SW, Calgary, AB",4,3.0,698000,2400,Yes,Evergreen,Detached,39,50.91,-114.1,True,290.83,75.86
 "19 Chaparral Valley Grove SE, Calgary, AB",3,2.5,614500,2050,Yes,Chaparral,Detached,92,50.88,-114.01,True,299.76,64.06
 "710 2 St NW, Calgary, AB",3,2.0,589000,1380,Yes,Sunnyside,Semi-Detached,54,51.07,-114.07,True,426.81,52.18
 "1200 Prominence Way SW, Calgary, AB",5,4.0,1175000,3400,Yes,Patterson,Detached,71,51.06,-114.17,True,345.59,76.79
-"32 Copperfield Blvd SE, Calgary, AB",3,2.0,530000,1790,Yes,Copperfield,Detached,42,50.91,-113.94,True,296.09,66.09
+"32 Copperfield Blvd SE, Calgary, AB",3,2.0,530000,1790,Yes,Copperfield,Detached,42,50.91,-113.93,True,296.09,66.09
 "88 Royal Oak Grove NW, Calgary, AB",3,2.5,429000,1600,Yes,Royal Oak,Row/Townhouse,66,51.15,-114.23,True,268.12,69.35
 "45 Saddleridge Dr NE, Calgary, AB",4,3.0,645000,2190,Yes,Saddleridge,Detached,55,51.13,-113.95,True,294.52,74.16
 "22 Evanston Sq NW, Calgary, AB",3,2.0,469000,1590,Yes,Evanston,Semi-Detached,32,51.17,-114.12,True,294.97,67.04
@@ -26,26 +26,26 @@ address,bedrooms,bathrooms,price,sqft,garage,community,property_type,days_on_mar
 "900 Cranston Ave SE, Calgary, AB",3,2.5,625000,2180,Yes,Cranston,Detached,68,50.88,-113.98,True,286.7,67.35
 "145 Saddleridge DR NE, Calgary, AB",4,3.0,649900,2210,Yes,SADDLERIDGE,Detached,55,51.13,-113.95,True,294.07,74.21
 "215 Sherwood Blvd NW, Calgary, AB",3,2.0,569000,1920,Yes,Sherwood,Detached,43,51.16,-114.16,True,296.35,65.98
-"44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,COPPERFIELD,Detached,42,50.91,-113.94,True,292.93,66.4
+"44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,COPPERFIELD,Detached,42,50.91,-113.93,True,292.93,66.4
 "18 Walden Parade SE, Calgary, AB",3,2.5,499000,1760,Yes,Walden,Semi-Detached,73,50.87,-114.03,True,283.52,67.25
 "92 Signal Hill Cir SW, Calgary, AB",4,3.0,749000,2600,Yes,Signal Hill,Detached,90,51.03,-114.17,True,288.08,71.88
-"3812 Centre A St NE, Calgary, AB",3,1.5,598000,1250,Yes,Highland Park,Detached,52,51.07,-114.06,True,478.4,44.76
+"3812 Centre A St NE, Calgary, AB",3,1.5,598000,1250,Yes,Highland Park,Detached,52,51.09,-114.06,True,478.4,44.76
 "88 Savanna Blvd NE, Calgary, AB",3,2.5,415000,1580,Yes,Savanna,Row/Townhouse,29,51.14,-113.95,True,262.66,72.98
 "507 30 Ave SW, Calgary, AB",5,4.0,1350000,3100,Yes,Elbow Park,Detached,84,51.03,-114.07,True,435.48,66.83
-"28 Nolan Hill Blvd NW, Calgary, AB",4,3.0,699000,2500,Yes,Nolan Hill,Detached,60,51.17,-114.16,True,279.6,75.22
+"28 Nolan Hill Blvd NW, Calgary, AB",4,3.0,699000,2500,Yes,Nolan Hill,Detached,60,51.18,-114.17,True,279.6,75.22
 "16 Quarry Villas SE, Calgary, AB",4,3.5,825000,2750,Yes,Quarry Park,Detached,117,50.96,-114.01,True,300.0,70.96
 "75 Auburn Bay Blvd SE, Calgary, AB",3,2.0,629000,2050,Yes,Auburn Bay,Detached,47,50.89,-113.95,True,306.83,64.61
 "21 Bridlewood Blvd SW, Calgary, AB",4,3.0,615000,2280,Yes,Bridlewood,Detached,67,50.91,-114.11,True,269.74,75.61
-"404 14 St NW, Calgary, AB",3,2.0,665000,1420,Yes,Hillhurst,Semi-Detached,35,51.14,-114.11,True,468.31,49.67
+"404 14 St NW, Calgary, AB",3,2.0,665000,1420,Yes,Hillhurst,Semi-Detached,35,51.17,-114.09,True,468.31,49.67
 "37 Evanston Sq NW, Calgary, AB",3,2.0,465000,1570,Yes,Evanston,Semi-Detached,32,51.17,-114.12,True,296.18,66.92
 "1401 17 Ave SW, Calgary, AB",2,2.0,420000,890,Yes,Lower Mount Royal,Condo/Apartment,40,51.04,-114.09,True,471.91,44.9
 "4 Skyview Ranch Rd NE, Calgary, AB",3,2.5,519000,1810,Yes,Skyview Ranch,Semi-Detached,54,51.16,-113.96,True,286.74,68.51
-"25 Cornerstone Blvd NE, Calgary, AB",3,2.0,399000,1450,Yes,Cornerstone,Row/Townhouse,37,51.16,-113.94,True,275.17,68.57
+"25 Cornerstone Blvd NE, Calgary, AB",3,2.0,399000,1450,Yes,Cornerstone,Row/Townhouse,37,51.17,-113.92,True,275.17,68.57
 "14 Hawkwood Blvd NW, Calgary, AB",4,3.0,715000,2430,Yes,Hawkwood,Detached,95,51.13,-114.17,True,294.24,70.86
 "63 Auburn Shores Lndg SE, Calgary, AB",4,3.5,1050000,3100,Yes,Auburn Bay,Detached,0,50.89,-113.96,True,338.71,76.88
 "230 Dieppe Dr SW, Calgary, AB",3,1.5,635000,1180,Yes,Glamorgan,Detached,57,51.02,-114.13,True,538.14,38.44
 "19 Cityscape Blvd NE, Calgary, AB",3,2.5,574000,1960,Yes,Cityscape,Detached,43,51.15,-113.97,True,292.86,68.83
-"502 30 Ave NW, Calgary, AB",3,1.5,700000,1050,Yes,Mount Pleasant,Detached,50,51.08,-114.18,True,666.67,26.33
+"502 30 Ave NW, Calgary, AB",3,1.5,700000,1050,Yes,Mount Pleasant,Detached,50,51.08,-114.08,True,666.67,26.33
 "33 Redstone Cir NE, Calgary, AB",3,2.5,409000,1520,Yes,Redstone,Row/Townhouse,38,51.17,-113.97,True,269.08,71.59
 "1101 Cameron Ave SW, Calgary, AB",6,5.0,2750000,5200,Yes,Upper Mount Royal,Detached,120,51.04,-114.09,True,528.85,63.61
 "73 Sherwood Blvd NW, Calgary, AB",4,3.0,724000,2480,Yes,Sherwood,Detached,63,51.16,-114.16,True,291.94,73.75

@@ -1,10 +1,9 @@
 import json
 import os
-import sys
 
-sys.path.append(os.path.dirname(os.path.dirname(__file__))) # adds the parent directory to the system path to allow importing from the caching module
-
-cache_file = "caching/geocode_cache.json"
+BASE_DIR = os.path.dirname(__file__)
+cache_file = os.path.join(BASE_DIR, "geocode_cache.json")
+os.makedirs(BASE_DIR, exist_ok=True) # ensure the cache directory exists
 
 def load_cache():
     if os.path.exists(cache_file):
