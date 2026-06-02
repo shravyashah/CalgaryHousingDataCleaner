@@ -1,7 +1,7 @@
 import pandas as pd
 
 def normalize_address(df): # normalizing the address column
-    abbreviations = { "Northeast": "NE", "Northwest": "NW", "Southeast": "SE", "Southwest": "SW", "Street": "St", "Avenue": "Ave", "Boulevard": "Blvd", "Drive": "Dr", "Road": "Rd", "Lane": "Ln", "Court": "Ct" ,
+    abbreviations = { "Northeast": "NE", "Northwest": "NW", "Southeast": "SE", "Southwest": "SW", "Street": "St", "Avenue": "Ave", "Boulevard": "Blvd", "Drive": "Dr", "Road": "Rd", "Lane": "Ln", "Court": "Ct" , "Grv":"Grove",
                      "Circle": "Cir","Circ": "Cir", "Place": "Pl", "Terrace": "Ter","Trail": "Trl", "Parkway": "Pkwy", "Highway": "Hwy", "Close": "Cl", "Crescent": "Cres","Landing": "Lndg", "Way": "Way", "Square": "Sq", "Loop": "Loop", "Point": "Pt", "View": "Vw"}
     for key, value in abbreviations.items():
         df["address"] = df["address"].str.replace(rf"\b{key}\b", value, regex=True) # replace full words with abbreviations using regex
@@ -9,11 +9,14 @@ def normalize_address(df): # normalizing the address column
 
 def clean_address(df): # cleaning the address column
     df["address"] = df["address"].astype(str).str.strip()
-    df["address"] = df["address"].str.replace("#",'', regex=False) # replace "#" with "Unit " for better geocoding results
-    df["address"] = df["address"].str.replace("-", "", regex=False) # ensure there is a space after "Unit" for better geocoding results
+    # if it has a unit number, replace "#" with "Unit " for better geocoding results
+
+    df["address"] = df["address"].str.replace(r"#\s*\d+\s*", "", regex=True) # replace "# followed by a number with an empty string to remove unit numbers from the address
+    df["address"]= df["address"].str.replace(r"unit\s*\d+\s*", " ", regex=True) # replace "unit" followed by a number with a single space
+    df["address"] = df["address"].str.replace(r"\s*-\s*", " ", regex=True)
+   
     df = df.dropna(subset=["address"]) # drop rows with missing address values
     df = df.drop_duplicates(subset=["address"])
-
     df["address"] = df["address"] + ", Calgary, AB" # add city and province to the address for better geocoding results
     return df
 
@@ -31,8 +34,7 @@ def normalize_garage(df): # normalizing the garage column
     df["garage"] = df["garage"].apply(lambda x: "No" if x in no_value else "Yes") # replace no value with "no garage"
     return df
 
-
-def clean_garage(df):
+def clean_garage(df): # converting the garage column to "Yes" or "No"
     df["garage"] = df["garage"].astype(str)
     return df
 

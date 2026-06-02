@@ -1,6 +1,7 @@
 from geopy.geocoders import Nominatim
+import pandas as pd
 import time
-from clean import clean_address
+
 
 #creating a geolocator object to use the Nominatim geocoding service
 geolocator = Nominatim(user_agent="calgary_houses_geocoder")
