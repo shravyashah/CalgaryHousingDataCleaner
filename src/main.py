@@ -12,34 +12,23 @@ def main():
     
     df = clean_price(df)
     df = clean_garage(df)
-    df = normalize_garage(df)
-    df = normalize_address(df)
-    df = clean_address(df)
-    
     df = clean_days_on_market(df)
 
+    df = normalize_garage(df)
+    df = clean_address(df)
+    df = normalize_address(df)
+
+    
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
-    df = add_geocodes(df)
+    df = add_geocodes(df).round({"latitude": 2, "longitude": 2}) # round to 2 decimal places for better readability and to reduce file size
     df = df[df["geo_valid"]].copy() # keep only rows with valid geocodes for better analysis and visualization
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
-    #debugging output to check the cleaned and processed data
 
-    #df = clean_address(df)
-    #check(df, "after clean_address")
-
-    #df = clean_price(df)
-    #check(df, "after clean_price")
-
-    #df = normalize_address(df)
-    #check(df, "after normalize_address")
-
-    #df = add_geocodes(df)
-    #check(df, "after geocoding")
-    
-    # debugging ends here, final output below
+    df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
+   
     print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))
     print(df.info())
     
