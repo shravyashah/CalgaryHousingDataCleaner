@@ -20,4 +20,3 @@ def score_houses(df):
 
     return df
 
-

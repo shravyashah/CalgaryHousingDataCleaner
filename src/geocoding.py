@@ -2,7 +2,6 @@ from geopy.geocoders import Nominatim
 import pandas as pd
 import time
 
-
 #creating a geolocator object to use the Nominatim geocoding service
 geolocator = Nominatim(user_agent="calgary_houses_geocoder")
 
@@ -45,4 +44,5 @@ def add_geocodes(df):
     
     df["latitude"] = latitudes
     df["longitude"] = longitudes
+    df["geo_valid"] = df["latitude"].notna() & df["longitude"].notna() # add a column to indicate whether the geocoding was successful
     return df

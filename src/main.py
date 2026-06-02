@@ -8,7 +8,6 @@ def check(df, step):
     print(step, type(df))
 
 def main():
-
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
     df = clean_price(df)
@@ -22,10 +21,10 @@ def main():
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
+    df = add_geocodes(df)
+    df = df[df["geo_valid"]].copy() # keep only rows with valid geocodes for better analysis and visualization
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
-    df = add_geocodes(df)
-
     #debugging output to check the cleaned and processed data
 
     #df = clean_address(df)
