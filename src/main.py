@@ -4,9 +4,9 @@ from features import create_price_per_sqft
 from rank import score_houses
 from geocoding import add_geocodes
 
-def check(df, step):
-    print(step, type(df))
-
+#def check(df, step):
+    #print(step, type(df))
+#only used for debugging purposes to check the type of the dataframe at each step of the data processing pipeline. It can be uncommented and used as needed to ensure that the dataframe is being processed correctly at each stage.
 def main():
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
@@ -18,7 +18,6 @@ def main():
     df = clean_address(df)
     df = normalize_address(df)
 
-    
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
