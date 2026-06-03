@@ -30,4 +30,5 @@ Here are the steps to access the project on PowerShell or whatever operating sys
 2. Activate venv by typing in venv\Scripts\activate in the terminal incase you need to install something
 3. Install pandas by running the following command: pip install pandas
 4. Then install geopy by running the following command: pip install pandas geopy
-5. Then to run the project go to the directory that the project is in and then run: python src\main.py
+5. After install the overpy wrapper to access OverPass api using this command: pip install overpy
+6. Then to run the project go to the directory that the project is in and then run: python src\main.py
