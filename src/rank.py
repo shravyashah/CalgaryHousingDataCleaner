@@ -1,6 +1,5 @@
 import pandas as pd
-
-from features import create_price_per_sqft
+from src.features import create_price_per_sqft
 
 def normalize(series):
     return (series - series.min()) / (series.max() - series.min()) if series.max() != series.min() else 0

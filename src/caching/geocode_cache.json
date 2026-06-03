@@ -218,5 +218,225 @@
     "211 18 Ave SW, Calgary, AB": [
         51.0371881,
         -114.070572
+    ],
+    "145 saddleridge dr ne, Calgary, AB": [
+        51.1273247,
+        -113.9507043
+    ],
+    "37 evanspark circ nw, Calgary, AB": [
+        null,
+        null
+    ],
+    "902 panorama hills dr nw, Calgary, AB": [
+        51.1507055,
+        -114.0757437
+    ],
+    "2204 17 st sw, Calgary, AB": [
+        51.0272201,
+        -114.102089
+    ],
+    "55 mahogany lake se, Calgary, AB": [
+        null,
+        null
+    ],
+    "310 legacy village rd se, Calgary, AB": [
+        50.8600261,
+        -114.0269235
+    ],
+    "17 tuscany ridge hts nw, Calgary, AB": [
+        51.1295065,
+        -114.2526649
+    ],
+    "44 copperfield blvd se, Calgary, AB": [
+        50.908973,
+        -113.9443881
+    ],
+    "820 cranston ave se, Calgary, AB": [
+        50.8761368,
+        -113.9831802
+    ],
+    "63 auburn shores landng se, Calgary, AB": [
+        null,
+        null
+    ],
+    "15 sage meadows circ nw, Calgary, AB": [
+        null,
+        null
+    ],
+    "4512 bowness rd nw, Calgary, AB": [
+        51.0635683,
+        -114.1493552
+    ],
+    "78 chaparral valley dr se, Calgary, AB": [
+        50.8800647,
+        -114.0135072
+    ],
+    "305 23 ave sw, Calgary, AB": [
+        51.0330822,
+        -114.1065148
+    ],
+    " 1020 9 ave se, Calgary, AB": [
+        51.04272,
+        -114.0377942
+    ],
+    "82 everstone rise sw, Calgary, AB": [
+        50.9071965,
+        -114.1022991
+    ],
+    "19 chaparral valley grv se, Calgary, AB": [
+        null,
+        null
+    ],
+    "710 2 st nw, Calgary, AB": [
+        51.0973398,
+        -114.0649908
+    ],
+    "1200 prominence way sw, Calgary, AB": [
+        51.0614875,
+        -114.1745835
+    ],
+    "32 copperfield blvd se, Calgary, AB": [
+        50.9100662,
+        -113.9303355
+    ],
+    "88 royal oak grv nw, Calgary, AB": [
+        null,
+        null
+    ],
+    "5003 varna dr nw, Calgary, AB": [
+        null,
+        null
+    ],
+    "45 saddleridge drive northeast, Calgary, AB": [
+        null,
+        null
+    ],
+    "22 evanston sq nw, Calgary, AB": [
+        51.1727337,
+        -114.1157468
+    ],
+    "103 aspen hills blvd sw, Calgary, AB": [
+        null,
+        null
+    ],
+    "1818 12 ave sw, Calgary, AB": [
+        null,
+        null
+    ],
+    "672 tuscany ridge hts nw, Calgary, AB": [
+        51.1295065,
+        -114.2526649
+    ],
+    "900 cranston ave se, Calgary, AB": [
+        50.8693136,
+        -113.9834919
+    ],
+    "215 sherwood blvd nw, Calgary, AB": [
+        51.1626597,
+        -114.1592638
+    ],
+    "44 copperfield boulevard se, Calgary, AB": [
+        50.9100662,
+        -113.9303355
+    ],
+    "18 walden parade se, Calgary, AB": [
+        50.8678667,
+        -114.0302237
+    ],
+    "92 signal hill circ sw, Calgary, AB": [
+        null,
+        null
+    ],
+    "3812 centre a st ne, Calgary, AB": [
+        51.0654331,
+        -114.0612338
+    ],
+    "88 savanna blvd ne, Calgary, AB": [
+        51.1350381,
+        -113.9501824
+    ],
+    "507 30 ave sw, Calgary, AB": [
+        51.0260708,
+        -114.0743507
+    ],
+    "28 nolan hill blvd nw, Calgary, AB": [
+        51.1734112,
+        -114.1665266
+    ],
+    "16 quarry villas se, Calgary, AB": [
+        50.9585017,
+        -114.0097863
+    ],
+    "75 auburn bay blvd se, Calgary, AB": [
+        50.8860569,
+        -113.9527498
+    ],
+    "21 bridlewood blvd sw, Calgary, AB": [
+        50.9065367,
+        -114.1056081
+    ],
+    "404 14 st nw, Calgary, AB": [
+        51.1692813,
+        -114.0903356
+    ],
+    "37 evanston sq nw, Calgary, AB": [
+        51.1727337,
+        -114.1157468
+    ],
+    "1401 17 ave sw, Calgary, AB": [
+        51.03757,
+        -114.0934506
+    ],
+    "4 skyview ranch rd ne, Calgary, AB": [
+        51.1646162,
+        -113.962123
+    ],
+    "25 cornerstone blvd ne, Calgary, AB": [
+        51.1562321,
+        -113.9382052
+    ],
+    "14 hawkwood blvd nw, Calgary, AB": [
+        51.1258523,
+        -114.1667891
+    ],
+    "63 auburn shores lndg se, Calgary, AB": [
+        50.8901296,
+        -113.9548217
+    ],
+    "230 dieppe dr sw, Calgary, AB": [
+        51.0171985,
+        -114.1304981
+    ],
+    "19 cityscape blvd ne, Calgary, AB": [
+        51.1472547,
+        -113.9693886
+    ],
+    "88 mahogany lake se, Calgary, AB": [
+        null,
+        null
+    ],
+    "502 30 ave nw, Calgary, AB": [
+        51.0797567,
+        -114.181099
+    ],
+    "33 redstone circ ne, Calgary, AB": [
+        null,
+        null
+    ],
+    "1101 cameron ave sw, Calgary, AB": [
+        51.036412,
+        -114.0886801
+    ],
+    "73 sherwood blvd nw, Calgary, AB": [
+        51.1624723,
+        -114.1576807
+    ],
+    "9 walden grove se, Calgary, AB": [
+        50.8695425,
+        -114.0292673
+    ],
+    "211 18 ave sw, Calgary, AB": [
+        null,
+        null
     ]
 }

@@ -1,8 +1,8 @@
 import pandas as pd
-from clean import clean_price,clean_address, normalize_address, normalize_garage, clean_garage, clean_days_on_market
-from features import create_price_per_sqft
-from rank import score_houses
-from geocoding import add_geocodes
+from src.clean import clean_price,clean_address, normalize_address, normalize_garage, clean_garage, clean_days_on_market
+from src.features import create_price_per_sqft
+from src.rank import score_houses
+from src.geocoding import add_geocodes
 
 #def check(df, step):
     #print(step, type(df))

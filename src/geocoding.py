@@ -1,5 +1,5 @@
 from geopy.geocoders import Nominatim
-from caching.cache import load_cache, save_cache
+from src.caching.cache import load_cache, save_cache
 import time
 
 #creating a geolocator object to use the Nominatim geocoding service
@@ -37,11 +37,14 @@ def add_geocodes(df):
     longitudes = []
     
     for address in df["address"]:
-        lat, lon = geocode_address(address)
+        if address in cache: # check if the address has already been geocoded and stored in the cache
+            lat, lon = cache[address] # retrieve the cached latitude and longitude if available   
+        else:
+            lat, lon = geocode_address(address)
+            time.sleep(1) # to avoid hitting the rate limit of the geocoding service
+    
         latitudes.append(lat)
         longitudes.append(lon)
-        time.sleep(1) # to avoid hitting the rate limit of the geocoding service
-    
     df["latitude"] = latitudes
     df["longitude"] = longitudes
     df["geo_valid"] = df["latitude"].notna() & df["longitude"].notna() # add a column to indicate whether the geocoding was successful
