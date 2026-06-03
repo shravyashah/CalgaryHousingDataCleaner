@@ -3,6 +3,7 @@ from src.clean import clean_price,clean_address, normalize_address, normalize_ga
 from src.features import create_price_per_sqft
 from src.rank import score_houses
 from src.geocoding import add_geocodes
+from src.poi.get_poi import fetch_schools, fetch_grocery_stores
 
 #def check(df, step):
     #print(step, type(df))
@@ -26,6 +27,8 @@ def main():
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
 
+    #testing poi fetching functions
+   
     df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
    
     print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))
