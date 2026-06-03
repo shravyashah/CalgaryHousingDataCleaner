@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was a way for me to get introduced into data cleaning and preprocessing pipeline. Additionally, I thought that there might be families desiring to move to Calgary urgently due to unforseen circumstances or just wanting to move to Calgary in an easier way instead of frantically searching and deciding what house is best for them. This prompted me to attempt to build a housing search and ranking system to give an idea of how good house listings are based on completeness, location, and affordability. 
+This project was a way for me to get introduced into data cleaning and piplining. Additionally, I thought that there might be families desiring to move to Calgary urgently due to unforseen circumstances or just wanting to move to Calgary in an easier way instead of frantically searching and deciding what house is best for them. This prompted me to attempt to build a housing search and ranking system to give an idea of how good house listings are based on completeness, location, and affordability. 
 
 ## Version 1
 
@@ -19,16 +19,17 @@ Version 2 is completed and includes
 - Cleaned up garage and number of days on market columns
 
 ## What is to come
-The project is currently in version 3 which will hopefully implement an improved ranking system. The first think that was done was geocoding to convert the addresses
-into coordinates so that other features can be implemented.
+The project is currently in version 3 which will hopefully implement an improved ranking system. The first thing that was done in v3 was geocoding to convert the addresses
+into coordinates using Nominatim so that other features can be implemented. Once that was completed, I used the Overpass Api to find poi such as schools and grocery stores. I had to limit it
+to a certain area of Calgary, as trying to find schools and stores for the whole of Calgary is not plausible due to api latency issues.
 
 An interesting feature that can be added is adding live-time data, so anyone can access it at anytime without having to search up listings. Just a thought for now... 
 
 ## Set up and How to run
 Here are the steps to access the project on PowerShell or whatever operating system you use:
 1. Go into the directory where your project is located
-2. Activate venv by typing in venv\Scripts\activate in the terminal incase you need to install something
+2. Activate venv by typing in venv\Scripts\activate in the terminal 
 3. Install pandas by running the following command: pip install pandas
 4. Then install geopy by running the following command: pip install pandas geopy
 5. After install the overpy wrapper to access OverPass api using this command: pip install overpy
-6. Then to run the project go to the directory that the project is in and then run: python src\main.py
+6. Then to run the project go to the directory that the project is in and then run: python -m src.main 
