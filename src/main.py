@@ -28,7 +28,13 @@ def main():
     df = score_houses(df)
 
     #testing poi fetching functions
-   
+    print("Fetching schools...")
+    schools = fetch_schools()
+    print(f"Number of schools found: {len(schools)}")
+    print("Fetching grocery stores...")
+    grocery_stores = fetch_grocery_stores()
+    print(f"Number of grocery stores found: {len(grocery_stores)}")
+    
     df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
    
     print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))

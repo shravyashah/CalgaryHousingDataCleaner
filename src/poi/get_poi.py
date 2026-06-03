@@ -1,5 +1,6 @@
 import overpy
-api = overpy.Overpass(url="https://overpass-api.de/api/interpreter")
+import time
+api = overpy.Overpass(url="https://overpass.kumi.systems/api/interpreter")
 
 #Overpass API query to fetch points of interest (POIs) such as schools and grocery stores in Calgary
 #In Overpass there are 3 different types of elements: nodes, ways, and relations.
@@ -8,12 +9,10 @@ api = overpy.Overpass(url="https://overpass-api.de/api/interpreter")
 #Relations are a collection of nodes and ways that form a logical group, such as a bus route or a neighborhood
 
 def fetch_schools():
-    query = """
-    area["name"="Calgary"]->.searchArea; 
+    query = """ 
     (
-      node["amenity"="school"](area.searchArea);
-      way["amenity"="school"](area.searchArea);
-      relation["amenity"="school"](area.searchArea);
+      node["amenity"~"school|college|university"](51.02,-114.1,51.05,-114.0);
+       
     );
     out center; 
     """
@@ -24,9 +23,6 @@ def fetch_schools():
     schools = []
     for node in result.nodes:
         schools.append((node.lat, node.lon)) # add the latitude and longitude of each school to the list
-
-    for way in result.ways:
-        schools.append((way.center_lat, way.center_lon)) # add the center latitude and longitude of each way to the list
     
     return schools
 
@@ -34,11 +30,9 @@ def fetch_grocery_stores():
     # Placeholder for fetching grocery store data
     # call API from a service like OpenStreetMap or a local database to get nearby grocery stores based on geocoded coordinates
     query = """
-    area["name"="Calgary"]->.searchArea;
     (
-      node["shop"="supermarket"](area.searchArea);
-      way["shop"="supermarket"](area.searchArea);
-      relation["shop"="supermarket"](area.searchArea);
+      node["shop"="supermarket"](51.02,-114.1,51.05,-114.0);
+     
     );
     out center; 
     """
@@ -46,7 +40,4 @@ def fetch_grocery_stores():
     grocery_stores = []
     for node in result.nodes:
         grocery_stores.append((node.lat, node.lon)) # add the latitude and longitude of each grocery store to the list
-    for way in result.ways:
-        grocery_stores.append((way.center_lat, way.center_lon)) # add the center latitude and longitude of each way to the list
-    
     return grocery_stores
