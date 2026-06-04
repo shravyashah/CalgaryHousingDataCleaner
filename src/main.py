@@ -3,7 +3,7 @@ from src.clean import clean_price,clean_address, normalize_address, normalize_ga
 from src.features import create_price_per_sqft
 from src.rank import score_houses
 from src.geocoding import add_geocodes
-from src.poi.get_poi import fetch_schools, fetch_grocery_stores
+from src.poi.get_poi import  load_schools, load_grocery_stores
 
 #def check(df, step):
     #print(step, type(df))
@@ -11,6 +11,8 @@ from src.poi.get_poi import fetch_schools, fetch_grocery_stores
 def main():
     df = pd.read_csv("data/raw/calgary_houses_raw.csv", low_memory = False)
     
+   # Calling functions that clean and normalize the data, add geocodes, create new features, and score the houses based on various criteria. 
+   # The final processed dataframe is then saved to a new CSV file and printed to the console for review.
     df = clean_price(df)
     df = clean_garage(df)
     df = clean_days_on_market(df)
@@ -27,14 +29,11 @@ def main():
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
 
-    #testing poi fetching functions
-    print("Fetching schools...")
-    schools = fetch_schools()
-    print(f"Number of schools found: {len(schools)}")
-    print("Fetching grocery stores...")
-    grocery_stores = fetch_grocery_stores()
-    print(f"Number of grocery stores found: {len(grocery_stores)}")
-    
+    schools = load_schools() # load the latitude and longitude of schools in Calgary
+    grocery_stores = load_grocery_stores() # load the latitude and longitude of grocery
+    print(f"Number of schools: {len(schools)}")
+    print(f"Number of grocery stores: {len(grocery_stores)}")
+
     df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
    
     print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))
