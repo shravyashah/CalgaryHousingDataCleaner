@@ -3,7 +3,7 @@ from src.clean import clean_price,clean_address, normalize_address, normalize_ga
 from src.features import create_price_per_sqft
 from src.rank import score_houses
 from src.geocoding import add_geocodes
-from src.poi.get_poi import  load_schools, load_grocery_stores
+from src.poi.get_poi import load_schools, load_grocery_stores
 
 #def check(df, step):
     #print(step, type(df))
