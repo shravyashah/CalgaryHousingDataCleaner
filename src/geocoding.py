@@ -1,5 +1,6 @@
 from geopy.geocoders import Nominatim
-from src.caching.cache import load_cache, save_cache
+from scripts.geocode_cache import load_cache, save_cache
+import json
 import time
 
 #creating a geolocator object to use the Nominatim geocoding service
@@ -51,3 +52,7 @@ def add_geocodes(df):
     
     save_cache(cache) # save the updated cache to the file
     return df
+
+def load_geocodes():
+    with open("scripts/geocode_cache.json", "r") as f:
+        return json.load(f)

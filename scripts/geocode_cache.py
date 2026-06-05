@@ -13,3 +13,8 @@ def load_cache():
 def save_cache(cache):
     with open(cache_file, "w") as f: # opens the cache file in write mode
         json.dump(cache, f,indent=4) # saves the cache data to the file in JSON format
+
+def save_geocodes(geocodes):
+    with open(cache_file, "w") as f: # opens the cache file in write mode
+        json.dump(geocodes, f, indent=4) # saves the geocodes data to the file in JSON format with indentation for readability
+

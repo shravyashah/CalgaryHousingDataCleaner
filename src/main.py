@@ -2,7 +2,7 @@ import pandas as pd
 from src.clean import clean_price,clean_address, normalize_address, normalize_garage, clean_garage, clean_days_on_market
 from src.features import create_price_per_sqft
 from src.rank import score_houses
-from src.geocoding import add_geocodes
+from src.geocoding import load_geocodes, is_valid_geocode
 from src.poi.get_poi import load_schools, load_grocery_stores
 
 #def check(df, step):
@@ -24,8 +24,11 @@ def main():
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
-    df = add_geocodes(df).round({"latitude": 2, "longitude": 2}) # round to 2 decimal places for better readability and to reduce file size
-    df = df[df["geo_valid"]].copy() # keep only rows with valid geocodes for better analysis and visualization
+    geo_df = load_geocodes() # load the geocoded latitude and longitude for each address from the cache file and add them to the dataframe
+    geo_df = {addr: (lat, lon) for addr, (lat, lon) in geo_df.items() if is_valid_geocode(lat, lon)} # filter out invalid geocodes
+    df = df.merge(pd.DataFrame.from_dict(geo_df, orient="index", columns=["latitude", "longitude"]), left_on="address", right_index=True, how="left") # merge the geocoded latitude and longitude with the original dataframe based on the address column
+    df = df.dropna(subset=["latitude", "longitude"]) # drop rows where geocoding failed and latitude or longitude is missing
+    
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = score_houses(df)
 
