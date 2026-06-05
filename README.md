@@ -20,8 +20,7 @@ Version 2 is completed and includes
 
 ## What is to come
 The project is currently in version 3 which will hopefully implement an improved ranking system. The first thing that was done in v3 was geocoding to convert the addresses
-into coordinates using Nominatim so that other features can be implemented. Once that was completed, I used the Overpass Api to find poi such as schools and grocery stores. I had to limit it
-to a certain area of Calgary, as trying to find schools and stores for the whole of Calgary is not plausible due to api latency issues.
+into coordinates using Nominatim so that other features can be implemented. Once that was completed, I used the Overpass Api to find poi such as schools and grocery stores. I had to use a caching system and avoid calling the api everytime I run the main file. Now moving onto computing the haversine formula for schools and grocery stores
 
 An interesting feature that can be added is adding live-time data, so anyone can access it at anytime without having to search up listings. Just a thought for now... 
 
