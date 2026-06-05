@@ -43,7 +43,7 @@ def main():
 
     df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
    
-    print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","distance_to_schools","distance_to_grocery_stores","latitude","longitude","score"]].head(54))
+    print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","distance_to_schools","distance_to_grocery_stores","latitude","longitude","score"]].head(60))
     print(df[["address","score", "distance_to_schools", "distance_to_grocery_stores"]])
     print(df.info())
     
