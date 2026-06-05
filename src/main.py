@@ -4,6 +4,7 @@ from src.features import create_price_per_sqft
 from src.rank import score_houses
 from src.geocoding import load_geocodes, is_valid_geocode
 from src.poi.get_poi import load_schools, load_grocery_stores
+from src.features import create_distance_to_poi
 
 #def check(df, step):
     #print(step, type(df))
@@ -30,16 +31,20 @@ def main():
     df = df.dropna(subset=["latitude", "longitude"]) # drop rows where geocoding failed and latitude or longitude is missing
     
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
-    df = score_houses(df)
-
+    df = create_distance_to_poi(df, load_schools(), "schools") # create a new column for the distance to the nearest school
+    
     schools = load_schools() # load the latitude and longitude of schools in Calgary
     grocery_stores = load_grocery_stores() # load the latitude and longitude of grocery
     print(f"Number of schools: {len(schools)}")
     print(f"Number of grocery stores: {len(grocery_stores)}")
+    
+    df = create_distance_to_poi(df, load_grocery_stores(), "grocery_stores") # create a new column for the distance to the nearest grocery store
+    df = score_houses(df)
 
     df.to_csv("data/processed/calgary_houses_processed.csv", index=False)
    
-    print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","score","latitude","longitude"]].head(54))
+    print(df[["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market", "price_per_sqft","distance_to_schools","distance_to_grocery_stores","latitude","longitude","score"]].head(54))
+    print(df[["address","score", "distance_to_schools", "distance_to_grocery_stores"]])
     print(df.info())
     
 if __name__ == "__main__":
