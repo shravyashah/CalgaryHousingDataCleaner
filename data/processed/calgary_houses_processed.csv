@@ -23,7 +23,6 @@ address,bedrooms,bathrooms,price,sqft,garage,community,property_type,days_on_mar
 "1818 12 Ave SW, Calgary, AB",1,1.0,275000,620,Yes,Sunalta,Condo/Apartment,35,51.0426181,-114.1055509,443.55,0.34,0.88,53.17
 "672 Tuscany Ridge Hts NW, Calgary, AB",5,3.0,795000,2930,Yes,Tuscany,Detached,86,51.1295065,-114.2526649,271.33,0.19,0.6,78.63
 "900 Cranston Ave SE, Calgary, AB",3,2.5,625000,2180,Yes,Cranston,Detached,68,50.8795553,-113.977643,286.7,0.38,0.16,77.23
-"145 Saddleridge DR NE, Calgary, AB",4,3.0,649900,2210,Yes,SADDLERIDGE,Detached,55,51.1273247,-113.9507043,294.07,0.53,0.38,77.7
 "215 Sherwood Blvd NW, Calgary, AB",3,2.0,569000,1920,Yes,Sherwood,Detached,43,51.157614,-114.1517815,296.35,0.31,0.4,75.23
 "44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,COPPERFIELD,Detached,42,50.908973,-113.9443881,292.93,0.6,1.31,63.98
 "18 Walden Parade SE, Calgary, AB",3,2.5,499000,1760,Yes,Walden,Semi-Detached,73,50.8678667,-114.0302237,283.52,0.76,0.58,70.12
