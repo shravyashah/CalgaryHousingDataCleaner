@@ -12,7 +12,6 @@ address,bedrooms,bathrooms,price,sqft,garage,community,property_type,days_on_mar
 "4512 Bowness Rd NW, Calgary, AB",3,1.0,679000,1100,Yes,Bowness,Detached,83,51.0889094,-114.2006107,617.27,0.11,1.06,39.85
 "78 Chaparral Valley Dr SE, Calgary, AB",4,3.0,669000,2350,Yes,Chaparral,Detached,63,50.8799772,-114.013624,284.68,1.21,1.84,57.76
 "305 23 Ave SW, Calgary, AB",1,1.0,295000,680,Yes,Mission,Condo/Apartment,45,51.0323196,-114.0655936,433.82,0.42,0.54,56.18
-" 1020 9 Ave SE, Calgary, AB",2,2.0,480000,950,Yes,Inglewood,Condo/Apartment,80,51.04272,-114.0377942,505.26,0.86,0.62,48.8
 "82 Everstone Rise SW, Calgary, AB",4,3.0,698000,2400,Yes,Evergreen,Detached,39,50.9071965,-114.1022991,290.83,0.63,0.8,74.14
 "19 Chaparral Valley Grove SE, Calgary, AB",3,2.5,614500,2050,Yes,Chaparral,Detached,92,50.8826672,-114.0140796,299.76,1.08,1.93,50.84
 "710 2 St NW, Calgary, AB",3,2.0,589000,1380,Yes,Sunnyside,Semi-Detached,54,51.0973398,-114.0649908,426.81,0.31,0.71,61.34

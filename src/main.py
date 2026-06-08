@@ -22,6 +22,7 @@ def main():
     df = clean_address(df)
     df = normalize_address(df)
 
+
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
