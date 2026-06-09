@@ -2,27 +2,50 @@
 
 ## Overview
 
-This project was a way for me to get introduced into data cleaning and piplining. Additionally, I thought that there might be families desiring to move to Calgary urgently due to unforseen circumstances or just wanting to move to Calgary in an easier way instead of frantically searching and deciding what house is best for them. This prompted me to attempt to build a housing search and ranking system to give an idea of how good house listings are based on completeness, location, and affordability. 
+Calgary Housing Data Cleaner and Ranker is a data engineering project that deals with pipelines and transforming raw house listings in Calgary into a ranked dataset based on affordability, listing quality, and where it is located.
 
-## Version 1
+This project integrates skills and concepts in:
+- Using pandas for data cleaning and preprocessing
+- Integrating API's for geocoding (Nominatim) and finding POI's (Overpass)
+- Feature engineering
+- Geospatial analysis using the Haversine formula
+- Designing a ranking system
+- Caching to improve API latency 
 
-Version 1 is now completed and includes:
-- Loading raw data from Calgary's housing sites and putting into a csv file
-- Cleaned up addresses, prices, and lot prices
-- Standarized address format to detect duplicates in address
-- Computed price/sqft which will be used in ranking system
+## Problem Motivation 
 
-## Version 2
-Version 2 is completed and includes
-- Ranking system out of 100 that ranks based on price/sqft, # of bedrooms, # of bathrooms,
-  number of days on the market, and if it has a garage
-- Cleaned up garage and number of days on market columns
+The motivation behind this project came from my Dad who is a landlord. Often times, listings can be tedious to find and often come with missing and inconsistent data. To make the search easier and more automated, a ELT pipeline approach was used.
 
-## What is to come
-The project is currently in version 3 which will hopefully implement an improved ranking system. The first thing that was done in v3 was geocoding to convert the addresses
-into coordinates using Nominatim so that other features can be implemented. Once that was completed, I used the Overpass Api to find poi such as schools and grocery stores. I had to use a caching system and avoid calling the api everytime I run the main file. Now moving onto computing the haversine formula for schools and grocery stores
+Pipeline: Read raw file -> Cleaning -> Geocoding -> POI extraction -> Feature Engineering -> Ranking -> Save processed file
 
-An interesting feature that can be added is adding live-time data, so anyone can access it at anytime without having to search up listings. Just a thought for now... 
+## Key Features
+
+1. Data Cleaning Pipeline
+   - Standardized raw house listings
+   - Cleaned addresses, prices, garage, and days on the market columns
+   - Removed duplicate addresses by using a a normalized formatting
+   - Engineered price/sqft
+
+2. Ranking System: Score is out of 100
+   - The number of bedrooms and bathrooms
+   - Price/Sqft
+   - Days on the Market
+   - Whether property has a garage
+   - How near it is to a school and grocery store
+  
+3. Geospatial analysis
+   - Geocoded addresses using Nominatim API
+   - Used the Overpass API to extract POI's (schools and grocery stores)
+   - Used the Haversine formula to compute the nearest school and grocery store for each address
+   - Implemented a caching system to improve API latency
+  
+## Tech Stacks Used
+
+- Python
+- Pandas
+- Json
+- Nominatim
+- Overpass
 
 ## Set up and How to run
 Here are the steps to access the project on PowerShell or whatever operating system you use:
@@ -31,4 +54,9 @@ Here are the steps to access the project on PowerShell or whatever operating sys
 3. Install pandas by running the following command: pip install pandas
 4. Then install geopy by running the following command: pip install pandas geopy
 5. After install the overpy wrapper to access OverPass api using this command: pip install overpy
-6. Then to run the project go to the directory that the project is in and then run: python -m src.main 
+6. Then to run the project go to the directory that the project is in and then run: python -m src.main
+
+## Future Improvements
+- Could integrate real in time listings
+- Can make it an interactive web app
+- Use Machine Learning to predict and compare prices of other listings in the area
