@@ -3,15 +3,17 @@ import re
 
 def normalize_address(df): # normalizing the address column
     df = df.copy()
-
-    df["address_key"] = df["address"].str.casefold()
-
+    
+    df["address"] = df["address"].str.replace(r"\xa0", " ", regex=True) 
+    df["address"] = df["address"].str.replace(r"\s+", " ", regex=True).str.strip()
+    
     abbreviations = { "Northeast": "NE", "Northwest": "NW", "Southeast": "SE", "Southwest": "SW", "Street": "St", "Avenue": "Ave", "Boulevard": "Blvd", "Drive": "Dr", "Road": "Rd", "Lane": "Ln", "Court": "Ct" , "Grv":"Grove",
                      "Circle": "Cir","Circ": "Cir", "Place": "Pl", "Terrace": "Ter","Trail": "Trl", "Parkway": "Pkwy", "Highway": "Hwy", "Close": "Cl", "Crescent": "Cres","Landing": "Lndg", "Way": "Way", "Square": "Sq", "Loop": "Loop", "Point": "Pt", "View": "Vw"}
     for key, value in abbreviations.items():
         df["address"] = df["address"].str.replace(rf"\b{key}\b", value, regex=True,flags=re.IGNORECASE)  # replace full words with abbreviations using regex
    
     df["address"] = df["address"].str.replace(r"\s+", " ", regex=True).str.strip()
+    df["address_key"] = df["address"].str.casefold()
     df = df.drop_duplicates(subset=["address_key"])
     
     return df
@@ -22,6 +24,7 @@ def normalize_address(df): # normalizing the address column
 
 def clean_address(df): # cleaning the address column
     df = df.copy()
+    
     df["address"] = df["address"].astype(str)
     df = df.dropna(subset = ["address"])
     
@@ -29,8 +32,9 @@ def clean_address(df): # cleaning the address column
     df["address"]= df["address"].str.replace(r"unit\s*\d+\s*", " ", regex=True) # replace "unit" followed by a number with a single space
     df["address"] = df["address"].str.replace(r"\s*-\s*", " ", regex=True)
    
+    df["address"] = df["address"].str.replace(r"\xa0", " ", regex=True) 
     df["address"] = df["address"].str.replace(r"\s+", " ", regex=True).str.strip()
-    df = df[df["address"] != ""]
+    
     return df
 # This function takes in a dataframe and cleans up the address column. It first converts everything into a string and removes any trailing
 # white spaces. Then apartments are dealt with by removing unit numbers and the word unit. After addresses are dropped if they do not
@@ -45,7 +49,6 @@ def clean_price(df): # cleaning the price column
 
     df["address"] = df["address"] + ", Calgary, AB"
     df = df.drop_duplicates(subset=["address"])
-
 
     return df
 # This function converts the values in the col into a string then replaces any symbols such as the dollar sign and the comma

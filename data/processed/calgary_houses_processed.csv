@@ -24,7 +24,6 @@ address,bedrooms,bathrooms,price,sqft,garage,community,property_type,days_on_mar
 "672 Tuscany Ridge Hts NW, Calgary, AB",5,3.0,795000,2930,Yes,Tuscany,Detached,86,51.1295065,-114.2526649,271.33,0.19,0.6,78.63
 "900 Cranston Ave SE, Calgary, AB",3,2.5,625000,2180,Yes,Cranston,Detached,68,50.8795553,-113.977643,286.7,0.38,0.16,77.23
 "215 Sherwood Blvd NW, Calgary, AB",3,2.0,569000,1920,Yes,Sherwood,Detached,43,51.157614,-114.1517815,296.35,0.31,0.4,75.23
-"44 Copperfield Blvd SE, Calgary, AB",3,2.0,539000,1840,Yes,COPPERFIELD,Detached,42,50.908973,-113.9443881,292.93,0.6,1.31,63.98
 "18 Walden Parade SE, Calgary, AB",3,2.5,499000,1760,Yes,Walden,Semi-Detached,73,50.8678667,-114.0302237,283.52,0.76,0.58,70.12
 "92 Signal Hill Cir SW, Calgary, AB",4,3.0,749000,2600,Yes,Signal Hill,Detached,90,51.0286852,-114.1680129,288.08,0.64,1.0,67.89
 "3812 Centre A St NE, Calgary, AB",3,1.5,598000,1250,Yes,Highland Park,Detached,52,51.0914525,-114.061041,478.4,0.34,0.79,55.38

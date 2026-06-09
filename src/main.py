@@ -21,16 +21,7 @@ def main():
     df = normalize_garage(df)
     df = clean_address(df)
     df = normalize_address(df)
-
-    print("START:", len(df))
-
-    df1 = clean_address(df)
-    print("AFTER CLEAN:", len(df1))
-
-    df2 = normalize_address(df1)
-    print("AFTER NORMALIZE:", len(df2))
-
-
+    
     keep_cols = ["address","bedrooms","bathrooms","price","sqft", "garage","community","property_type","days_on_market"]
     df = df[keep_cols]
 
@@ -42,8 +33,8 @@ def main():
     df = df.merge(pd.DataFrame.from_dict(geo_df, orient="index", columns=["latitude", "longitude"]), left_on="address", right_index=True, how="left") # merge the geocoded latitude and longitude with the original dataframe based on the address column
     df = df.dropna(subset=["latitude", "longitude"], how = "all") # drop rows where geocoding failed and latitude or longitude is missing
     
-    #where features are implemented and creates new columns to be in the processed dataframe
-    #also the score function is called to rank houses based on a score out of 100
+    # where features are implemented and creates new columns to be in the processed dataframe
+    # also the score function is called to rank houses based on a score out of 100
     df = create_price_per_sqft(df) # useful for knowing the price per square foot of the house
     df = create_distance_to_poi(df, load_schools(), "schools") # create a new column for the distance to the nearest school
     df = create_distance_to_poi(df, load_grocery_stores(), "grocery_stores") # create a new column for the distance to the nearest grocery store
