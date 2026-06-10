@@ -39,6 +39,11 @@ Pipeline: Read raw file -> Cleaning -> Geocoding -> POI extraction -> Feature En
    - Used the Haversine formula to compute the nearest school and grocery store for each address
    - Implemented a caching system to improve API latency
   
+## Power BI Dashboard
+
+Here is a dashboard showcasing statistics on the processed house listings.
+![Dashboard](outputs/Calgary_House_Cleaner_Dashboard.png)
+  
 ## Tech Stacks Used
 
 - Python
