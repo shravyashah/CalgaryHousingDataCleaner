@@ -42,7 +42,7 @@ Pipeline: Read raw file -> Cleaning -> Geocoding -> POI extraction -> Feature En
 ## Power BI Dashboard
 
 Here is a dashboard showcasing statistics on the processed house listings.
-![Dashboard](outputs/House_Dashboard)
+![Dashboard](outputs/House_Dashboard.png)
   
 ## Tech Stacks Used
 
